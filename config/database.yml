@@ -7,15 +7,15 @@ development:
   password: vitruvius
   socket: /tmp/mysql.sock
 
-test:
-  adapter: mysql2
-  encoding: utf8
-  database: t_vitruvius
-  pool: 5
-  username: vitruvius
-  password: vitruvius
-  socket: /tmp/mysql.sock
-
+#test:
+#  adapter: mysql2
+#  encoding: utf8
+#  database: t_vitruvius
+#  pool: 5
+#  username: vitruvius
+#  password: vitruvius
+#  socket: /tmp/mysql.sock
+#
 #production:
 #  adapter: mysql2
 #  encoding: utf8
