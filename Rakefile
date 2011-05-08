@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Vitruvius::Application.load_tasks
+Teamate::Application.load_tasks

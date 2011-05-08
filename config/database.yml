@@ -1,26 +1,26 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: vitruvius
+  database: teamate
   pool: 5
-  username: vitruvius
-  password: vitruvius
+  username: teamate
+  password: teamate
   socket: /tmp/mysql.sock
 
 test:
   adapter: mysql2
   encoding: utf8
-  database: t_vitruvius
+  database: t_teamate
   pool: 5
-  username: vitruvius
-  password: vitruvius
+  username: teamate
+  password: teamate
   socket: /tmp/mysql.sock
 
 #production:
 #  adapter: mysql2
 #  encoding: utf8
-#  database: p_vitruvius
+#  database: p_Teamate
 #  pool: 5
-#  username: vitruvius
-#  password: vitruvius
+#  username: Teamate
+#  password: Teamate
 #  socket: /tmp/mysql.sock

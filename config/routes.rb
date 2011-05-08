@@ -1,4 +1,4 @@
-Vitruvius::Application.routes.draw do
+Teamate::Application.routes.draw do
   get "pages/home"
 
   # The priority is based upon order of creation:
