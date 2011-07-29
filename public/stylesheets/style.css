@@ -83,7 +83,7 @@ body{
     margin-bottom:20px;
 }
 #menu li{
-    float:right;
+    float:left;
 }
 #menu a{
     display:block;
