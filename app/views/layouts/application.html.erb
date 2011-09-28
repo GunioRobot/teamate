@@ -1,33 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>
-      Teamate
-    </title>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>TeaMate</title>
+    <meta name="description" content="Project managment app aimed to small development teams.">
+    <meta name="author" content="MFH">
     
-    <%= stylesheet_link_tag "style.css", "960.css"%>
-    <%= javascript_include_tag "scripts.js", "jquery-1.5.min.js"%>
-    <%= csrf_meta_tag %>
+    <!-- E6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
+    <!-- Sttyles -->
+    <%= stylesheet_link_tag "bootstrap.css", "style.css"%>
+      
+    <!-- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>  
+    <%= javascript_include_tag "scripts.js"%> 
+    
+    <!-- Fv and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 </head>
-<body id="home">
+<body>
+    
+    <%= render 'layouts/header' %>
 
-<%= render 'layouts/header' %>
+    <div class="container">
+        <div id="content" class="container_12">
+            <div class="content">
+                <div class="page-header">
+                    <h1>Messages <small>for project Hell Yeah CMS</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <%= yield %>
+                    </div>
+                    <div class="span4" id="sidebar">
+                        <%= render 'layouts/sidebar-menu' %>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div id="content" class="container_12">
-  <%= yield %>
-</div>
+        <%= render 'layouts/footer' %>
 
-<%= render 'layouts/footer' %>
+    </div> <!-- /container -->
 
-</body>
+  </body>
 </html>

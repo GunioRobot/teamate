@@ -1,43 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-margin: 0;
-padding: 0;
-border: 0;
-outline: 0;
-font-size: 100%;
-vertical-align: baseline;
-background: transparent;
-}
-body {line-height: 1;}
-ol, ul, li {list-style: none;}
-blockquote, q {quotes: none;}
-blockquote:before, blockquote:after,
-q:before, q:after {content: '';content: none;}
-/* remember to define focus styles! */
-:focus {outline: 0;}
-/* remember to highlight inserts somehow! */
-ins {text-decoration: none;}
-del {text-decoration: line-through;}
-/* tables still need 'cellspacing="0"' in the markup */
-table {border-collapse: collapse;border-spacing: 0;}
-h1, h2, h3, h4, h5, h6{margin:0 0 0.5em 0; font-weight:normal; color:#545454; /* font-style: Arial, Tahoma, "Trebuchet MS" */}
-h1{font-size:1.7em; color: white;}
-h2{font-size:1.15em; font-weight:bold;}
-h3{font-size:1em; font-weight:bold;}
-h3{font-size:1em; font-weight:bold;}
-h3{font-size:1em;}
-h6{font-size:1em;}
-p{line-height:1.4em; text-align: justify; margin: 10px 0; }
-a, a:link, a:active, a:visited { text-decoration:none; color:#EC307B; font-weight: normal; font-size:1.03em}
-a:hover{color: #B11352;}
-
 /******************** CLASSES *******************/
 .clear{ clear: both; overflow:hidden;}
 .altrow{ background: #f3f3f3; }
@@ -46,17 +6,46 @@ a:hover{color: #B11352;}
 .float-left{position: relative; float: left;}
 .separator{clear:both; height:1px; width:100%; border-bottom: 1px dotted silver;}
 .loading-bg{background: white url('../img/loading.gif') no-repeat 50% 50%; }
-.overflow-hidden{overflow: hidden;}
 
 /******************** GENERAL *******************/
-body{
- 	font-size: 13px;
- 	color: #888;
-    background: white url('../img/bg.png') repeat-x;
+* { z-index: 50; }
+html, body {
+  background-color: #eee;
 }
-* { z-index: 50; font-family: helvetica, Arial, freesans, Tahoma, "Trebuchet MS"; }
-/******************** COLUMNS  *******************/
+body {
+  padding-top: 80px; /* 80px to make the container go all the way to the bottom of the topbar */
+}
+.container > footer p {
+  text-align: center; /* center align it with the container */
+}
 
+/* The white background content wrapper */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Page header tweaks */
+.page-header {
+  background-color: #f5f5f5;
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+}
+
+
+.topbar .fill{
+    height: 80px;
+}
+.topbar .fill .container{
+    padding: 20px 0;
+}
 
 /******************** HEADER  *******************/
 #header{
@@ -78,23 +67,25 @@ body{
     text-align: right;
 }
 /******************** MENU  *******************/
+/*
 #menu{
     margin-top:20px;
     margin-bottom:20px;
 }
 #menu li{
-    float:left;
+    float:right;
 }
 #menu a{
+   
     display:block;
     padding: 6px 10px;
     border-radius: 2px;
-    /* background: #4FB0FE; */
     color: white;
     font-size: 15px;
     font-weight: normal;
     text-transform: lowercase;
 }
+*/
 #menu .home-menu:hover{color: #4FB0FE;}
 #home .home-menu, #home .home-menu:hover{background: #4FB0FE; color:#333;}
 
@@ -115,20 +106,26 @@ body{
     overflow: hidden;
     margin: 20px auto; position:relative;
 }
+/******************** MAIN  *******************/
+#content #main{
+}
 /******************** SIDEBAR  *******************/
 #sidebar{
 }
 #sidebar ul{
     background: white;
-    border-radius: 3px; 
+    border-radius: 3px;
+    margin-left: 0;
 }
 #sidebar ul li{
     position: relative;
+    list-style: none;
 }
 #sidebar ul li a{ 
-    padding: 6px 10px;
+    line-height: 28px;
     display:block;
     color:#444;
+    padding: 0 42px 0 10px;
 }
 #sidebar ul li a:hover{ 
     color: #000;
@@ -140,10 +137,11 @@ body{
     display: none;
 }
 #sidebar ul ul li a{ 
-    padding: 4px 10px;
+    line-height: 28px;
     display:block;
     color: #A0A0A0;
     font-size:12px;
+    padding: 0 10px;
 }
 #sidebar ul ul li a:hover{ 
     color: #fff;
@@ -158,8 +156,11 @@ body{
 .toggle-submenu{
     position:absolute;
     top:0; right:0;
-    cursor: pointer; 
-    padding:6px 10px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background: transparent url('../img/35.png') no-repeat center center;
+    opacity: 0.3;
 }
 .toggle-submenu:hover{
     color: #000;
@@ -168,13 +169,26 @@ body{
 /******************** MESSAGES  *******************/
 .message{
     background: white;
-    border-radius: 3px; 
-    border: 1px solid silver;
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 10px 10px 10px;
     margin-bottom:10px;
 }
-.message .title h3{
-    margin-top:0;
+.message .title{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.message .title img {
+    border: 1px solid #ccc;
+    float: left;
+    height: 48px;
+    margin-right: 10px;
+    position: relative;
+    width: 48px;
+    border-radius: 2px;
+}
+.message h3{
+    margin-top: 0;
+    line-height: 1.2em;
 }
 .message .date, .message .info{
     color:#999;
@@ -192,70 +206,6 @@ body{
 }
 .even{
     background: #f4f4f4;
-}
-/******************** FORMS  *******************/
-fieldset{
-    background: white;
-    border-radius: 3px; 
-    border: 1px solid silver;
-    padding: 10px;
-    margin-bottom:10px;
-}
-legend{
-    padding: 0 5px;
-    font-weight: bold;
-}
-label{
-    display:block;
-    font-weight: bold;
-}
-input[type="text"], input[type="password"], textarea, select {
-    border: 1px solid #DDDDDD;
-    border-radius: 3px;
-    color: #666666;
-    display: block;
-    font-size: 13px;
-    padding: 6px;
-    position: relative;
-    width: 400px;
-    margin: 3px 0 10px 0;
-}
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-    border-color:#EC307B;
-}
-.short{
-    width:150px;
-    float:left;
-    margin-right:10px;
-}
-input[type="radio"], input[type="checkbox"]{
-    float: left;
-    margin: 8px 8px 0 8px;
-    clear: left;
-}
-.radio{
-    padding: 8px 0 0 0;
-    clear: right;
-    font-weight: normal;
-}
-div.form-div{
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-input[type="submit"], input[type="button"], input[type="reset"]{
-    border: 1px solid #EC307B;
-    border-radius: 3px;
-    padding: 6px 8px;
-    font-size: 14px;
-    margin: 3px 10px 0 0;
-    color: #fff;
-    background: #EE5995;
-}
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover{
-    background: #EC307B;
-}
-input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active{
-    background: #C72D6B;
 }
 /******************** FOOTER  *******************/
 table{

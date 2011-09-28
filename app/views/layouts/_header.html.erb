@@ -1,21 +1,21 @@
-<!---------- HEADER ---------->
-<div id="header">
-    <div class="container_12">
-        <h1 class="grid_4"><%= image_tag("logo.png", :alt => "Teamate") %></h1>
-
-        <!---------- USER MENU ---------->
-        <div id="user-menu" class="grid_8">
-            Welcome User | <a href="#">Logout</a>
+<div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <img src="img/logo.png" alt=""/>
+            <a class="brand" href="#">TeaMate</a>
+            <ul class="nav" id="menu">
+                <li><a href="links" class="links-menu">Links</a></li>
+                <li><a href="timetrackings" class="time-menu">Timetracking</a></li>
+                <li><a href="todos" class="todos-menu">To-dos</a></li>
+                <li><a href="milestones" class="milestones-menu">Milestones</a></li>
+                <li><a href="messages" class="messages-menu">Messages</a></li>
+                <li><a href="home" class="home-menu">Home</a></li>
+            </ul>
+            <form action="" class="pull-right">
+                <input class="input-small" type="text" placeholder="Email">
+                <input class="input-small" type="password" placeholder="Password">
+                <button class="btn" type="submit">Sign in</button>
+            </form>
         </div>
-    
-        <!---------- MENU ---------->
-        <ul id="menu" class="grid_8">
-            <li><%= link_to "Home", root_path, class: "home-menu" %></li>
-            <li><a href="/messages" class="messages-menu">Messages</a></li>
-            <li><a href="/milestones" class="milestones-menu">Milestones</a></li>
-            <li><a href="/todos" class="todos-menu">To-dos</a></li>
-            <li><a href="/timetracking" class="milestones-menu">Timetracking</a></li>
-            <li><a href="/links" class="links-menu">Links</a></li>
-        </ul>
     </div>
 </div>
