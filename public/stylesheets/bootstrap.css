@@ -650,7 +650,7 @@ input[type=checkbox], input[type=radio] {
   width: auto;
   height: auto;
   padding: 0;
-  margin: 3px 0;
+  margin: 3px 5px 3px 0;
   *margin-top: 0;
   /* IE6-7 */
 
@@ -1034,7 +1034,7 @@ textarea[readonly] {
   margin-bottom: 0;
 }
 .form-stacked {
-  padding-left: 20px;
+  /* padding-left: 20px; ST 20.9.2011. */
 }
 .form-stacked fieldset {
   padding-top: 9px;
@@ -1075,7 +1075,7 @@ textarea[readonly] {
   margin-left: -10px;
 }
 .form-stacked .actions {
-  margin-left: -20px;
+  /* margin-left: -20px; ST 29.09.2011. */
   padding-left: 20px;
 }
 /*
@@ -1240,7 +1240,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   color: #bfbfbf;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-.topbar h3 a:hover, .topbar .brand a:hover, .topbar ul .active > a {
+.topbar h3 a:hover, .topbar ul .active > a {
   background-color: #333;
   background-color: rgba(255, 255, 255, 0.05);
   color: #ffffff;
@@ -1249,7 +1249,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar h3 {
   position: relative;
 }
-.topbar h3 a, .topbar .brand {
+.topbar h3 a{
   float: left;
   display: block;
   padding: 8px 20px 12px;
@@ -1258,6 +1258,23 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
+}
+.topbar .brand {
+  float: left;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.topbar .brand:hover {
+  text-decoration: none;
+}
+.topbar .brand img{
+  margin-right: 10px;
+  vertical-align: middle;
 }
 .topbar p {
   margin: 0;

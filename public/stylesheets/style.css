@@ -159,7 +159,7 @@ body {
     cursor: pointer;
     height: 32px;
     width: 32px;
-    background: transparent url('../img/35.png') no-repeat center center;
+    background: transparent url('../images/35.png') no-repeat center center;
     opacity: 0.3;
 }
 .toggle-submenu:hover{

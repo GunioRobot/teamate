@@ -2,6 +2,12 @@ Teamate::Application.routes.draw do
   root :to => 'pages#home'
   get "pages/home"
 
+  # routes for pages controller
+  match 'pages/:id',
+  :controller   => 'pages',
+  :action       => 'show',
+  :requirements => { :id => /[a-z]+/ }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

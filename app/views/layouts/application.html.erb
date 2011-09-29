@@ -29,19 +29,22 @@
     <%= render 'layouts/header' %>
 
     <div class="container">
-        <div id="content" class="container_12">
-            <div class="content">
-                <div class="page-header">
-                    <h1>Messages <small>for project Hell Yeah CMS</small></h1>
+        <div class="content">
+            <div class="page-header">
+                <h1>Fancy page title <small> with short description</small></h1>
+            </div>
+            <div class="row">
+                <div class="span16">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Fancy</a> <span class="divider">&raquo;</span></li>
+                        <li><a href="#">Bread</a> <span class="divider">&raquo;</span></li>
+                        <li class="active">Crumbs</li>
+                    </ul>
+                    <%= yield %>
                 </div>
-                <div class="row">
-                    <div class="span12">
-                        <%= yield %>
-                    </div>
-                    <div class="span4" id="sidebar">
-                        <%= render 'layouts/sidebar-menu' %>
-                    </div>
-                </div>
+                <!--div class="span4" id="sidebar">
+                    <%= render 'layouts/sidebar-menu' %>
+                </div-->
             </div>
         </div>
 
