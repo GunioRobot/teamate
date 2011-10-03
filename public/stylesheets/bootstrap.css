@@ -180,6 +180,14 @@ textarea {
  * Scaffolding
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
+
+/*
+ * ST 29.11.2011. Search and replaces blue colors to pink
+ * PINK
+ *    from(#B11352), to(#EC307B)
+ * BLUE
+ *    from(#049cdb), to(#0064cd)
+*/
 html, body {
   background-color: #ffffff;
 }
@@ -239,12 +247,14 @@ body {
 }
 a {
   color: #0069d6;
+  color: #EC307B; /* ST 29.09.2011. Testing pink links */
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
 }
 a:hover {
-  color: #00438a;
+  color: #00438a; 
+  color: #B11352; /* ST 29.09.2011. Testing pink links */
   text-decoration: underline;
 }
 .pull-right {
@@ -1097,7 +1107,7 @@ table {
   border-radius: 4px;
 }
 table th, table td {
-  padding: 10px 10px 9px;
+  padding: 7px 10px 6px;
   line-height: 18px;
   text-align: left;
 }
@@ -1183,8 +1193,8 @@ table tbody tr:last-child td:last-child {
   opacity: 0.6;
 }
 table .blue {
-  color: #049cdb;
-  border-bottom-color: #049cdb;
+  color: #B11352;
+  border-bottom-color: #B11352;
 }
 table .headerSortUp.blue, table .headerSortDown.blue {
   background-color: #ade6fe;
@@ -1310,9 +1320,9 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.1);
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -1335,11 +1345,6 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   background-color: #ffffff;
   color: #404040;
   text-shadow: 0 1px 0 #ffffff;
-  border: 0;
-  padding: 5px 10px;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
 }
 .topbar-inner, .topbar .fill {
   background-color: #222;
@@ -1845,18 +1850,18 @@ footer {
 }
 .btn.primary {
   color: #ffffff;
-  background-color: #0064cd;
+  background-color: #EC307B;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
-  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
-  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
-  background-image: linear-gradient(top, #049cdb, #0064cd);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#B11352), to(#EC307B));
+  background-image: -moz-linear-gradient(top, #B11352, #EC307B);
+  background-image: -ms-linear-gradient(top, #B11352, #EC307B);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B11352), color-stop(100%, #EC307B));
+  background-image: -webkit-linear-gradient(top, #B11352, #EC307B);
+  background-image: -o-linear-gradient(top, #B11352, #EC307B);
+  background-image: linear-gradient(top, #B11352, #EC307B);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B11352', endColorstr='#EC307B', GradientType=0);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border-color: #0064cd #0064cd #003f81;
+  border-color: #EC307B #EC307B #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn:active {
@@ -2046,7 +2051,8 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   text-decoration: none;
 }
 .pagination a:hover, .pagination .active a {
-  background-color: #c7eefe;
+  color: #EC307B;
+  background-color: #FFF5F9;
 }
 .pagination .disabled a, .pagination .disabled a:hover {
   background-color: transparent;

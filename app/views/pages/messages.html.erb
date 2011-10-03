@@ -1,3 +1,11 @@
+        <div class="toolbar">
+          <a class="btn">New</a>
+          <a class="btn">Messages</a>
+          <a class="btn">&laquo; Previous</a>
+          <a class="btn">Next &raquo;</a>
+        </div>
+
+
 <div class="well message">
     <div class="title">
         <a href="#"><img src="/images/stanko.png"/></a>
@@ -65,13 +73,26 @@
     </div>
 </div>
 
+<h3>Reply</h3>
 
 <form class="form-stacked" action="">
+  <div class="well message">
+    <div class="title">
+        <a href="#"><img src="/images/stanko.png"/></a>
+        <h3>Re: That's what she said</h3>
+        <div class="date">13. January 2011. 12:05</div>
+    </div>
     <fieldset>
+        <div class="toolbar">
+          <a class="btn"><b>Bold</b></a>
+          <a class="btn"><i>Italic</i></a>
+          <a class="btn">Bullets</a>
+          <a class="btn">Numbering</a>
+          <a class="btn">Link</a>
+        </div>
         <div class="clearfix">
-            <label for="xlInput3">Message</label>
             <div class="input">
-                <textarea name="xlInput3" id="xlInput3" placeholder="Type your reply..." class="span12"></textarea>
+                <textarea name="xlInput3" id="xlInput3" placeholder="Type your reply..." class="span15"></textarea>
             </div>
         </div><!-- /clearfix -->
         <div class="clearfix">
@@ -84,13 +105,10 @@
                         </label>
                     </li>
                 </ul>
-                <span class="help-block">
-                    <strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
-                </span>
             </div>
         </div><!-- /clearfix -->
     </fieldset>
-    <div class="actions">
-        <button class="btn primary" type="submit">Save changes</button>&nbsp;<button class="btn" type="reset">Cancel</button>
+    <button class="btn primary" type="submit">Send</button>
+    <button class="btn" type="reset">Cancel</button>
     </div>
 </form>

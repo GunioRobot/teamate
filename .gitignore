@@ -7,4 +7,4 @@ doc/
 *.swp
 *~
 .DS_Store
-
+nbproject/*

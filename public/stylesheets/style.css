@@ -4,7 +4,7 @@
 .small{ font-size: 0.8em;}
 .float-right{position: relative; float: right;}
 .float-left{position: relative; float: left;}
-.separator{clear:both; height:1px; width:100%; border-bottom: 1px dotted silver;}
+.separator{clear:both; height:1px; width:100%; border-bottom: 1px dotted silver; margin-bottom: 10px;}
 .loading-bg{background: white url('../img/loading.gif') no-repeat 50% 50%; }
 
 /******************** GENERAL *******************/
@@ -75,17 +75,11 @@ body {
 #menu li{
     float:right;
 }
-#menu a{
-   
-    display:block;
-    padding: 6px 10px;
-    border-radius: 2px;
-    color: white;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: lowercase;
-}
 */
+#menu a{
+    position: relative;
+}
+
 #menu .home-menu:hover{color: #4FB0FE;}
 #home .home-menu, #home .home-menu:hover{background: #4FB0FE; color:#333;}
 
@@ -100,6 +94,20 @@ body {
 
 #menu .links-menu:hover{color: #FF8700;}
 #links .links-menu, #links .links-menu:hover{background: #FF8700; color:#333;}
+
+#menu .new-items{
+    margin: -10px 0 0 5px;
+    display: block;
+    float:right;
+    background-color: #444;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+#menu a:hover .new-items{color: #fff;}
 
 /******************** CONTENT  *******************/
 #content{
@@ -206,6 +214,13 @@ body {
 }
 .even{
     background: #f4f4f4;
+}
+
+.toolbar{
+    padding-bottom: 15px;
+}
+.toolbar .btn{
+    padding: 3px 8px 4px;
 }
 /******************** FOOTER  *******************/
 table{
