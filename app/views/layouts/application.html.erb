@@ -5,18 +5,20 @@
     <title>TeaMate</title>
     <meta name="description" content="Project managment app aimed to small development teams.">
     <meta name="author" content="MFH">
-    
-    <!-- E6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
+
     <!-- Sttyles -->
     <%= stylesheet_link_tag "bootstrap.css", "style.css"%>
       
     <!-- Scripts -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>  
     <%= javascript_include_tag "scripts.js", "jquery.tablesorter.min.js"%> 
+    
+    
+    <!-- E6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <%= javascript_include_tag "ie.js"%> 
+    <![endif]-->
     
     <!-- Fv and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">

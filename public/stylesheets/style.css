@@ -13,7 +13,7 @@ html, body {
   background-color: #eee;
 }
 body {
-  padding-top: 80px; /* 80px to make the container go all the way to the bottom of the topbar */
+  padding-top: 64px; /* 80px to make the container go all the way to the bottom of the topbar */
 }
 .container > footer p {
   text-align: center; /* center align it with the container */
@@ -38,13 +38,11 @@ body {
   padding: 20px 20px 10px;
   margin: -20px -20px 20px;
 }
-
-
 .topbar .fill{
-    height: 80px;
+    height: 64px;
 }
 .topbar .fill .container{
-    padding: 20px 0;
+    padding: 12px 0;
 }
 
 /******************** HEADER  *******************/
@@ -176,9 +174,8 @@ body {
 
 /******************** MESSAGES  *******************/
 .message{
-    background: white;
+    background: #fff;
     border: 1px solid #ddd;
-    padding: 10px 10px 10px 10px;
     margin-bottom:10px;
 }
 .message .title{
@@ -247,4 +244,10 @@ td, th{
     margin: 0 auto; 
     background: transparent; 
     font-size:11px;
+}
+/******************** TAGS  *******************/
+.tags .label{
+    padding: 5px 20px;
+    float: left;
+    margin: 0 5px 5px 0;
 }
