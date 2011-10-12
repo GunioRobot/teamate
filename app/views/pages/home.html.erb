@@ -1,3 +1,71 @@
+<div class="clear">
+<div id="home-animation">
+  <img id="big-logo" src="/images/big-logo.png" alt="TeaMate" />
+  <img id="reflection" src="/images/reflection.png" alt="" />
+</div>
+
+<div id="home-right">
+  <h1>TeaMate<small> easy and smart</small></h1>
+  <ul>
+    <li><img src="/images/home-icons/communicate.png" alt="" /> Communicate...</li>
+    <li><img src="/images/home-icons/manage.png" alt="" /> manage...</li>
+    <li><img src="/images/home-icons/track.png" alt="" /> and track averything!</li>
+  </ul>
+</div>
+</div>
+
 <p><a href="javascript:void(0)" onclick="showOutdatedBrowserDiv(); $(this).parent().remove();">Click here</a> to show outdated browser alert.</p>
 
 
+<style>
+  #home-animation{
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+  }
+  #big-logo{
+    position: absolute;
+    top: -400px;
+    left: 0;
+  }
+  #reflection{
+    position: absolute;
+    top: 0px;
+    right: -250px;
+  }
+  
+  #home-right{
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 800px;
+  }
+  #home-right h1, #home-right h2, #home-right li{ display: none; }
+  #home-right li{
+    list-style: none;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  #home-right li img{vertical-align: middle; padding-right: 15px;}
+</style>
+
+<script type="text/javascript">
+  $(function(){
+    homeAnimation();
+  });
+  
+  function homeAnimation(){
+    var bigLogo = $('#big-logo');
+    var reflection = $('#reflection');
+    bigLogo.animate({'top':0}, 1700, 'easeOutBounce', function(){
+      reflection.animate({'right':'550px'}, 1300)
+      var homeRightElements = $('#home-right h1, #home-right h2, #home-right ul li');
+      homeRightElements.each(function(index) {
+        $(this).delay(800*index).fadeIn(800);
+      });
+    });
+  }
+</script>
