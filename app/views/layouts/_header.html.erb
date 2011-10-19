@@ -1,10 +1,10 @@
 <div class="topbar">
     <div class="fill">
         <div class="container">
-            <a class="brand" href="#"><img src="/images/logo.png" alt=""/>TeaMate</a>
+            <%= link_to image_tag("logo.png", :alt=>'Teamate')+'TeaMate', '/', {:class=>'brand'}%>
             <ul class="nav" id="menu">
-                <li><a href="/home" class="home-menu">Home</a></li>
-                <li><a href="/messages" class="messages-menu">Messages<!--span class="new-items">12</span--></a></li>
+                <li><a href="/" class="home-menu">Home</a></li>
+                <li><a href="/conversations" class="messages-menu">Messages<!--span class="new-items">12</span--></a></li>
                 <li><a href="/milestones" class="milestones-menu">Milestones</a></li>
                 <li><a href="/todos" class="todos-menu">To-dos</a></li>
                 <li><a href="/timetrackings" class="time-menu">Timetracking</a></li>

@@ -1,0 +1,42 @@
+<div class="page-header">
+    <h1>Users <small> all of them</small></h1>
+</div>
+<ul class="breadcrumb">
+    <li><%= link_to 'Home', '/' %> <span class="divider">&raquo;</span></li>
+    <li class="active">Users</li>
+</ul>
+
+
+<table class="zebra-striped">
+  <thead>
+  <tr>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Status</th>
+    <th>Token</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.email %></td>
+    <td><%= user.password %></td>
+    <td><%= user.name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.status %></td>
+    <td><%= user.token %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

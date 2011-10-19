@@ -17,6 +17,9 @@ $(document).ready(function(){
 	    }
 	});
 
+    $('.alert-message .close').live('click', function(){
+        $(this).parents('.alert-message').slideUp(800);
+    })
 });
 
 function showOutdatedBrowserDiv(){
@@ -33,6 +36,6 @@ function showOutdatedBrowserDiv(){
     outdatedDiv += '</p>';
     outdatedDiv += '</div>';
     
-    $('ul.breadcrumb').before(outdatedDiv);
+    $('div.content').prepend(outdatedDiv);
     $('#outdated').slideDown(800)
 }

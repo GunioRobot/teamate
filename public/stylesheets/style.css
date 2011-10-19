@@ -10,7 +10,7 @@
 /******************** GENERAL *******************/
 * { z-index: 50; }
 html, body {
-  background: #f3f3f3 url('../images/bg.png') repeat;
+  background: #fff url('../images/bg.jpg') no-repeat center 60px fixed;
 }
 body {
   padding-top: 64px; /* 80px to make the container go all the way to the bottom of the topbar */
@@ -215,7 +215,7 @@ body {
 }
 
 .toolbar{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 .toolbar .btn{
     padding: 3px 8px 4px;

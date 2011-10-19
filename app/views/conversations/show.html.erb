@@ -1,0 +1,41 @@
+<div class="page-header">
+    <h1><%= @conversation.messages[0].title %> <small> started by <%= @conversation.messages[0].user.name %></small></h1>
+</div>
+<ul class="breadcrumb">
+    <li><%= link_to 'Home', '/' %> <span class="divider">&raquo;</span></li>
+    <li><%= link_to 'Messages', conversations_path %> <span class="divider">&raquo;</span></li>
+    <li class="active"><%= @conversation.messages[0].title %></li>
+</ul>
+
+
+<% i = 0; %>
+<% @conversation.messages.each do |message| %>
+<%
+  i = i+1
+  tmp = i%2
+  even = ''
+  if tmp == 0
+    even = 'even'
+  end
+%>
+<div class="well message <%= even %>">
+    <div class="title">
+        <a href="#"><img src="/images/stanko.png"/></a>
+        <h3><%= message.title %></h3>
+        <div class="date"><%= message.created_at %></div>
+    </div>
+
+    <div class="message-text">
+        <p>
+          <%= message.text %>
+        </p>
+    </div>
+    <div class="info">
+        Posted by <%= link_to message.user.name, message.user %> | <a href="#">Reply</a>
+    </div>
+</div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_conversation_path(@conversation) %> |
+<%= link_to 'Back', conversations_path %>

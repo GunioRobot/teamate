@@ -1,4 +1,10 @@
 Teamate::Application.routes.draw do
+  resources :conversations
+
+  resources :messages
+
+  resources :users
+
   root :to => 'pages#home'
   get "pages/home"
 

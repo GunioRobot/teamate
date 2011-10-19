@@ -1,0 +1,43 @@
+<div class="page-header">
+    <h1>Messages <small> all of them</small></h1>
+</div>
+<ul class="breadcrumb">
+    <li><%= link_to 'Home', '/' %> <span class="divider">&raquo;</span></li>
+    <li class="active">Messages</li>
+</ul>
+
+<script >
+$(function() {
+    $("table").tablesorter({ sortList: [[0,0]] });
+});
+</script>
+
+<table class="zebra-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>User</th>
+      <th>Text</th>
+      <th>Created</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+<% @messages.each do |message| %>
+  <tr>
+    <td><%= link_to message.title, message %></td>
+    <td><%= message.user.name %></td>
+    <td><%= message.text[0,60] %>...</td>
+    <td><%= message.created_at %></td>
+    <td><%= link_to 'Show', message %></td>
+    <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    <td><%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Message', new_message_path %>

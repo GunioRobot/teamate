@@ -10,8 +10,9 @@
     <%= stylesheet_link_tag "bootstrap.css", "style.css"%>
       
     <!-- Scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>  
-    <%= javascript_include_tag "jquery.tablesorter.min.js", "easing.js", "scripts.js" %> 
+    <%= javascript_include_tag "jquery-1.6.4.min.js", "rails.js"%> 
+    <%= javascript_include_tag "jquery.tablesorter.min.js", "easing.js" %>
+    <%= javascript_include_tag "scripts.js" %> 
     
     
     <!-- E6-8 support of HTML elements -->
@@ -32,22 +33,7 @@
 
     <div class="container">
         <div class="content">
-            <div class="page-header">
-                <h1>Fancy page title <small> with short description</small></h1>
-            </div>
-            <div class="row">
-                <div class="span16">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Fancy</a> <span class="divider">&raquo;</span></li>
-                        <li><a href="#">Bread</a> <span class="divider">&raquo;</span></li>
-                        <li class="active">Crumbs</li>
-                    </ul>
-                    <%= yield %>
-                </div>
-                <!--div class="span4" id="sidebar">
-                    <%= render 'layouts/sidebar-menu' %>
-                </div-->
-            </div>
+            <%= yield %>
         </div>
 
         <%= render 'layouts/footer' %>
