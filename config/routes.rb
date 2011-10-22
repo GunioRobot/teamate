@@ -1,9 +1,5 @@
 Teamate::Application.routes.draw do
-  resources :conversations
-
-  resources :messages
-
-  resources :users
+  resources :users, :messages, :conversations, :sessions
 
   root :to => 'pages#home'
   get "pages/home"
@@ -13,6 +9,9 @@ Teamate::Application.routes.draw do
   :controller   => 'pages',
   :action       => 'show',
   :requirements => { :id => /[a-z]+/ }
+
+  match 'login', :to => 'sessions#new'
+  match 'logout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

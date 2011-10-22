@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_filter :authenticate
 
   rescue_from ActionView::MissingTemplate, :with => :invalid_page
 

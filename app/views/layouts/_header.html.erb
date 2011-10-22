@@ -1,7 +1,7 @@
-<div class="topbar">
-    <div class="fill">
+<div class="topbar"> <div class="fill">
         <div class="container">
             <%= link_to image_tag("logo.png", :alt=>'Teamate')+'TeaMate', '/', {:class=>'brand'}%>
+            <% if signed_in? %>
             <ul class="nav" id="menu">
                 <li><a href="/" class="home-menu">Home</a></li>
                 <li><a href="/conversations" class="messages-menu">Messages<!--span class="new-items">12</span--></a></li>
@@ -10,10 +10,18 @@
                 <li><a href="/timetrackings" class="time-menu">Timetracking</a></li>
                 <li><a href="/links" class="links-menu">Links</a></li>
             </ul>
-            <form action="" class="pull-right">
-                <input class="input-small" type="text" placeholder="Email">
-                <input class="input-small" type="password" placeholder="Password">
-                <button class="btn" type="submit">Sign in</button>
+
+            <div class="pull-right">
+              Welcome <%= "#{current_user.name} #{current_user.last_name}" %>
+              <a href="/logout" >Logout</a>
+            </div>
+            <% else%>
+              <%= form_for(:session, :url => sessions_path, :html => {:class => "pull-right"}) do |f| %>
+                <%= f.text_field :email, :class => "input-small", :placeholder => "Email" %>
+                <%= f.password_field :password, :class => "input-small", :placeholder => "Password" %>
+                <%= f.submit :class=>'btn primary', :value => "Login" %>
+              <% end %>
+            <% end %>
             </form>
         </div>
     </div>
