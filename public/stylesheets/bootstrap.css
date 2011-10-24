@@ -1307,6 +1307,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   float: right;
 }
 .topbar input {
+  width: 170px;
   background-color: #444;
   background-color: rgba(255, 255, 255, 0.3);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1329,13 +1330,14 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   -o-transition: none;
   transition: none;
 }
+.topbar input.btn { width: 60px; }
 .topbar input:-moz-placeholder {
   color: #e6e6e6;
 }
 .topbar input::-webkit-input-placeholder {
   color: #e6e6e6;
 }
-.topbar input:hover {
+.topbar input[type=text]:hover, .topbar input[type=password]:hover {
   background-color: #bfbfbf;
   background-color: rgba(255, 255, 255, 0.5);
   color: #ffffff;

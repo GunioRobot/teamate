@@ -16,19 +16,28 @@
       <%= f.text_field :title, :class=>'span10', :placeholder=>'Subject' %>
     </div>
   </div>
+  
+  <script type="text/javascript">
+    $(function(){
+      initBBEditor('textarea');
+    });
+  </script>
        
   <div class="clearfix">
       <div class="toolbar">
-        <a class="btn"><b>Bold</b></a>
-        <a class="btn"><i>Italic</i></a>
-        <a class="btn">Bullets</a>
-        <a class="btn">Numbering</a>
-        <a class="btn">Link</a>
+        <a class="btn bold"><b>Bold</b></a>
+        <a class="btn italic"><i>Italic</i></a>
+        <a class="btn bullets">Bullets</a>
+        <a class="btn numbering">Numbering</a>
+        <a class="btn link">Link</a>
+        <a class="btn undo">Undo</a>
+        <a class="btn redo">Redo</a>
       </div>
       <div class="input">
         <%= f.text_area :text, :class=>'span16', :rows=>'10', :cols=>'', :placeholder=>'Type your message...' %>
       </div>
   </div><!-- /clearfix -->
+  
   <div class="actions">
     <%= f.submit :class=>'btn primary' %>
     <%= link_to 'Back', messages_path, :class=>'btn'  %>
