@@ -4,8 +4,9 @@
 .small{ font-size: 0.8em;}
 .float-right{position: relative; float: right;}
 .float-left{position: relative; float: left;}
-.separator{clear:both; height:1px; width:100%; border-bottom: 1px dotted silver; margin-bottom: 10px;}
+.separator{clear:both; height:1px; width:100%; border-bottom: 1px solid #DDDDDD; margin-bottom: 10px;}
 .loading-bg{background: white url('../img/loading.gif') no-repeat 50% 50%; }
+.underlined{border-bottom: 1px solid #DDD;}
 
 /******************** GENERAL *******************/
 * { z-index: 50; }
@@ -176,8 +177,9 @@ body {
 /******************** MESSAGES  *******************/
 .message{
     background: #fff;
-    border: 1px solid #ddd;
+    padding: 10px;
     margin-bottom:10px;
+    border-radius: 6px;
 }
 .message .title{
     overflow: hidden;

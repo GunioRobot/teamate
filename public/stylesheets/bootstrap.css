@@ -1245,6 +1245,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   right: 0;
   z-index: 10000;
   overflow: visible;
+  color: #666;
 }
 .topbar a {
   color: #bfbfbf;
@@ -1331,10 +1332,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   transition: none;
 }
 .topbar input.btn { width: 60px; }
-.topbar input:-moz-placeholder {
-  color: #e6e6e6;
-}
-.topbar input::-webkit-input-placeholder {
+.topbar input:-moz-placeholder,  .topbar input::-webkit-input-placeholder {
   color: #e6e6e6;
 }
 .topbar input[type=text]:hover, .topbar input[type=password]:hover {
@@ -1342,7 +1340,8 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   background-color: rgba(255, 255, 255, 0.5);
   color: #ffffff;
 }
-.topbar input:focus, .topbar input.focused {
+.topbar input[type=text]:focus, .topbar input[type=text].focused,
+.topbar input[type=password]:focus, .topbar input[type=password].focused {
   outline: 0;
   background-color: #ffffff;
   color: #404040;
@@ -2325,7 +2324,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   opacity: 1;
 }
 .label {
-  padding: 1px 3px 2px;
+  padding: 1px 5px 1px;
   background-color: #bfbfbf;
   font-size: 9.75px;
   font-weight: bold;

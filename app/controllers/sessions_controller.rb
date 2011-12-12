@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if user.nil?
       flash[:error] = "Bad username/password combination"
-      redirect_to '/login'
+      redirect_to '/'
     else
       sign_in user
       redirect_to root_url

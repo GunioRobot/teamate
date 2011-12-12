@@ -8,3 +8,5 @@ doc/
 *~
 .DS_Store
 nbproject/*
+
+.project
