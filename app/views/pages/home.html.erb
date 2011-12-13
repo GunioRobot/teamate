@@ -1,3 +1,11 @@
+<% flash.each do |key, msg| %>
+  <div class="alert-message block-message <%=key%>">
+    <a class="close" href="javascript:void(0)">×</a>
+    <p><%= msg %></p>
+  </div>
+<% end %>
+
+
 <div class="clear">
 <div id="home-animation">
   <img id="big-logo" src="/images/big-logo.png" alt="TeaMate" />
