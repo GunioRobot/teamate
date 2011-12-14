@@ -6,7 +6,17 @@
     <li class="active">Messages</li>
 </ul>
 
-<script >
+
+<% flash.each do |key, msg| %>
+  <div class="alert-message block-message <%=key%>">
+    <a class="close" href="javascript:void(0)">×</a>
+    <p><%= msg %></p>
+  </div>
+<% end %>
+
+
+
+<script>
 $(function() {
     $("table").tablesorter({ sortList: [[0,0]] });
 });
@@ -28,7 +38,7 @@ $(function() {
 <% @messages.each do |message| %>
   <tr>
     <td><%= link_to message.title, message %></td>
-    <td><%= message.user.name %></td>
+    <td><%#= message.user.name %>NOT IMPLEMENTED YET</td>
     <td><%= message.text[0,60] %>...</td>
     <td><%= message.created_at %></td>
     <td><%= link_to 'Show', message %></td>

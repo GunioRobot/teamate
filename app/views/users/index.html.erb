@@ -6,12 +6,16 @@
     <li class="active">Users</li>
 </ul>
 
+<script>
+$(function() {
+    $("table").tablesorter({ sortList: [[0,0]] });
+});
+</script>
 
 <table class="zebra-striped">
   <thead>
   <tr>
     <th>Email</th>
-    <th>Password</th>
     <th>Name</th>
     <th>Last name</th>
     <th>Status</th>
@@ -25,7 +29,6 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.email %></td>
-    <td><%= user.password %></td>
     <td><%= user.name %></td>
     <td><%= user.last_name %></td>
     <td><%= user.status %></td>
@@ -36,7 +39,5 @@
   </tr>
 <% end %>
 </table>
-
-<br />
 
 <%= link_to 'New User', new_user_path %>

@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
   skip_before_filter :authenticate
 
   def new
+      flash[:error] = "You have to login to see that page"
+      redirect_to '/'
   end
 
   def create
