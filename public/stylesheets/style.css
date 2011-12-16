@@ -129,29 +129,29 @@ body {
     position: relative;
     list-style: none;
 }
-#sidebar ul li a{ 
+#sidebar ul li a{
     line-height: 28px;
     display:block;
     color:#444;
     padding: 0 42px 0 10px;
 }
-#sidebar ul li a:hover{ 
+#sidebar ul li a:hover{
     color: #000;
 }
 #sidebar ul ul{
     background: #333;
-    border-radius: 0px; 
+    border-radius: 0px;
     border: none;
     display: none;
 }
-#sidebar ul ul li a{ 
+#sidebar ul ul li a{
     line-height: 28px;
     display:block;
     color: #A0A0A0;
     font-size:12px;
     padding: 0 10px;
 }
-#sidebar ul ul li a:hover{ 
+#sidebar ul ul li a:hover{
     color: #fff;
 }
 #home .home-menu ul,
@@ -244,8 +244,8 @@ td, th{
     border-top: 1px dotted #A0A0A0;
     width:960px; overflow: hidden;
     padding: 20px 0; position:relative;
-    margin: 0 auto; 
-    background: transparent; 
+    margin: 0 auto;
+    background: transparent;
     font-size:11px;
 }
 /******************** TAGS  *******************/

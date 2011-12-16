@@ -253,7 +253,7 @@ a {
   font-weight: inherit;
 }
 a:hover {
-  color: #00438a; 
+  color: #00438a;
   color: #B11352; /* ST 29.09.2011. Testing pink links */
   text-decoration: underline;
 }

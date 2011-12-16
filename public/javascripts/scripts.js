@@ -2,7 +2,7 @@ function initBBEditor(selector){
 	$(selector).bbcodeeditor(
 	{
 		//preview			:	$('.preview'),
-		//exit_warning		:	true,	
+		//exit_warning		:	true,
 		bold				:	$('.bold'),
 		italic				:	$('.italic'),
 		underline			:	$('.underline'),
@@ -21,7 +21,7 @@ function initBBEditor(selector){
 }
 
 function showOutdatedBrowserDiv(){
-    var outdatedDiv; 
+    var outdatedDiv;
     outdatedDiv = '<div class="alert-message block-message error" id="outdated" style="display:none">';
     outdatedDiv += '<a href="javascript:void(0)" class="close" onclick="$(this).parent().slideUp(800)">×</a>';
     outdatedDiv += '<strong>You\'re using outdated browser</strong>';
@@ -33,7 +33,7 @@ function showOutdatedBrowserDiv(){
     outdatedDiv += 'Modern browsers will improve your overall internet experience! Yay!';
     outdatedDiv += '</p>';
     outdatedDiv += '</div>';
-    
+
     $('div.content').prepend(outdatedDiv);
     $('#outdated').slideDown(800)
 }
@@ -45,7 +45,7 @@ $(document).ready(function(){
 	}, function() {
 		$(this).siblings().stop().fadeTo(500,1);
 	});
-	
+
 	// sidebar submenus show/hide
 	$('.toggle-submenu').click(function() {
 	    var ul = $(this).parent().find('ul');

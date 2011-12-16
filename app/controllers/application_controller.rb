@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
     def authenticate
-      deny_access unless signed_in?  
+      deny_access unless signed_in?
     end
-  
+
 end
